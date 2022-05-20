@@ -3,7 +3,7 @@
 ### 功能
 
 - A股量化交易系统
-- 后台开发语言 Go  [gmsec](https://github.com/gmsec/gmsec)
+- 后台开发语言 Go/Python  [gmsec](https://github.com/gmsec/gmsec)
 - gormt 嵌入，自动数据库代码生成 [gorm 自动构建(gormt)](https://github.com/xxjwxc/gormt)
 - 分时任务,盯盘助手,研报股评,每日监控,微信提醒，玩转组织，AI智能
 - uniapp 小程序端
