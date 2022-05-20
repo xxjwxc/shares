@@ -1,0 +1,224 @@
+syntax = "proto3"; // 指定proto版本
+
+package shares;     // 指定包名
+import "common/common_public.proto";
+
+option go_package = "rpc/shares"; // 指定路径
+
+// 定义shares服务
+service shares {
+    // GetGroup 获取分组信息
+    rpc GetGroup(common.Empty) returns (GetGroupResp) {}
+    // GetMyGroup 获取分组信息
+    rpc GetMyGroup(CodeReq) returns (GetMyGroupResp) {}
+    // UpsetGroupCode 更新分组信息
+    rpc UpsetGroupCode(UpsetGroupCodeReq) returns (common.Empty) {}
+     // Search 搜索
+     rpc Search(SearchReq) returns (SearchResp) {}
+     // Gets 精确查找代码
+     rpc Gets(GetsReq) returns (GetsResp){}
+     // GetAllCodeName 获取所有中文
+     rpc GetAllCodeName(common.Empty) returns (GetAllCodeNameResp){}
+     // AddMyCode 给自己添加一个监听
+     rpc AddMyCode(AddMyCodeReq) returns(AddMyCodeResp){}
+     // GetMyCode 获取我的监听,code不为空获取全部
+     rpc GetMyCode(GetMyCodeReq) returns(GetMyCodeResp){}
+     // GetMsg 获取消息
+     rpc GetMsg(common.Empty)returns(GetMsgResp){}
+     // HaveNewMsg 是否有新消息
+     rpc HaveNewMsg(common.Empty)returns(HaveNewMsgResp){}
+     // DeleteMyCode 删除一个监听
+     rpc DeleteMyCode(DeleteMyCodeReq) returns(common.Empty){}
+     // AddGroup 添加一个组织
+	 rpc AddGroup(AddGroupReq) returns (common.Empty){}
+}
+
+// SharesInfo 股票信息
+message SharesInfo{
+    string code = 1;// 股票代码
+	string simpleCode =2;// 股票代码简写
+    string ext = 3;// 后缀
+	string name = 4;// 股票名字
+    double price = 5;// 当前价格
+    double percent = 6;// 百分比
+    string color = 7;// 颜色
+    string img = 8;// 图片地址
+    string hy = 9;// 行业板块
+    string attach = 10;// 附加
+    string peg = 11;// peg信息
+}
+
+// SharesInfoDetails 股票详细信息
+message SharesInfoDetails{
+    string code = 1;// 股票代码
+	string simpleCode =2;// 股票代码简写
+    string ext = 3;// 后缀
+	string name = 4;// 股票名字
+    double price = 5;// 当前价格
+    double percent = 6;// 百分比
+    string color = 7;// 颜色
+    string img = 8;// 图片地址
+    double volume = 9;// 成交量（手）
+    double turnover = 10;// 成交额（万）
+    double turnoverRate = 11; // 换手率
+    double pe = 12; // 市盈率
+    double pb = 13;// 市净率
+    double total = 15;// 流通市值
+    double cap = 16;// 总市值
+    double zljlr = 17;// 主力资金净流入
+    double openPrice = 18;// 开盘价
+    double closePrice = 19;// 收盘价
+    double macd = 20;// macd
+    double dif = 21;// 快线
+    double dea = 22;// 慢线
+    double max = 23;// 当日最高点
+    double min = 24;// 当日最低
+}
+
+
+message Group {
+    string name = 1;// 分组名
+    repeated SharesInfo list = 2;// 列表
+}
+
+// GetGroupResp 请求结构
+message GetGroupResp {
+    repeated Group list = 1;// 列表 
+}
+
+// SearchReq 搜索请求
+message SearchReq{
+    string code = 1;// 股票代码
+    string tag = 2;// 标记(min,daily)
+}
+
+// SearchReq 搜索请求
+message SearchResp{
+    SharesInfo info = 1;// 返回信息
+}
+
+message GetsReq {
+    repeated string codes = 1;// 股票代码
+}
+
+// SimpleSharesInfo 股票信息
+message SimpleSharesInfo{
+    string code = 1;// 股票代码
+    double price = 5;// 当前价格
+    double percent = 6;// 百分比
+    string color = 7;// 颜色
+}
+
+
+message GetsResp {
+    repeated SimpleSharesInfo list = 2;// 列表(只返回价格相关的信息(code,price,percent,color))
+}
+
+message CodeNameInfo{
+    string code = 1;// 股票代码
+	string name = 2;// 股票名字
+    string sName = 3;// 股票简写
+}
+
+message GetAllCodeNameResp{
+    repeated CodeNameInfo list = 1;// 代码列表
+}
+
+message AddMyCodeReq{
+    string code = 1;// 股票代码
+    double price = 2;// 当前价格
+    bool kdj =3;// 日线金叉提醒
+    bool kdj20 = 4;// 20日线提醒
+	bool surge = 5;// 盘中急涨提醒
+	bool slump = 6;// 盘中急跌提醒
+	bool ai = 7;// AI智能提醒
+    bool public = 8;// 是否推荐给组织
+	double up = 9;// 估价涨到
+	double down = 10;// 估价跌到
+	double upPercent = 11;// 涨幅超
+	double downPercent = 12; // 跌幅超
+    bool vaild = 13;// 是否有效
+    
+    // 返回值用
+    string simpleCode =14;// 股票代码简写
+    string ext = 15;// 后缀
+	string name = 16;// 股票名字
+    double percent = 17;// 百分比
+    string color = 18;// 颜色
+}
+
+message AddMyCodeResp{
+    bool status = 1;// 状态是否成功
+    string msg = 2;// 消息
+}
+
+message GetMyCodeReq{
+    string code = 1;// 股票代码
+}
+
+message AddMyCodeInfo {
+    string code = 1;// 股票代码
+    double price = 2;// 当前价格
+    bool kdj =3;// 日线金叉提醒
+	bool surge = 4;// 盘中急涨提醒
+	bool slump = 5;// 盘中急跌提醒
+	bool ai = 6;// AI智能提醒
+    bool public = 7;// 是否推荐给组织
+	double up = 8;// 估价涨到
+	double down = 9;// 估价跌到
+	double upPercent = 10;// 涨幅超
+	double downPercent = 11; // 跌幅超
+}
+
+message GetMyCodeResp{
+    repeated AddMyCodeReq list = 1;
+}
+
+message Msg{
+    string code = 1;// 股票代码
+    string simpleCode =2;// 股票代码简写
+    string ext = 3;// 后缀
+	string name = 4;// 股票名字    
+    double price = 5;// 当前价格     
+    string key =6;// 标签        
+    string desc = 7;// 描述   
+    double percent = 8;// 百分比
+    string color = 9;// 颜色
+    string now = 10;// 当前时间
+    string tag = 11;// 标记(min,daily)
+}
+
+message GetMsgResp {
+    repeated Msg list = 1;// 消息列表
+}
+
+message HaveNewMsgResp{
+    bool badge = 1;// 是否有新消息
+}
+
+message DeleteMyCodeReq{
+    string code = 1;// 股票代码
+}
+
+message AddGroupReq{
+    string key = 1;// 分组key
+}
+
+message CodeReq{
+    string code = 1;// 股票代码
+}
+
+message GetMyGroupResp{
+    string code = 1;// 股票代码
+    string groupName = 2;// 分组名
+    string userName = 3;// 推荐人
+    int32 wi = 4;// 权重
+    repeated string group = 5;// 我的股票列表
+}
+
+message UpsetGroupCodeReq{
+    string code = 1;// 股票代码
+    string groupName = 2;// 分组名 
+    string userName = 3;// 推荐人
+    bool isAdd = 4;// 是否添加,false:删除
+}

@@ -1,0 +1,1192 @@
+{
+     "swagger": "2.0",
+     "info": {
+          "description": "swagger default desc",
+          "version": "1.0.0",
+          "title": "Swagger Petstore"
+     },
+     "host": "localhost:82",
+     "basePath": "/shares",
+     "tags": [
+          {
+               "name": "Analy",
+               "description": ""
+          },
+          {
+               "name": "Shares",
+               "description": ""
+          },
+          {
+               "name": "Weixin",
+               "description": ""
+          }
+     ],
+     "schemes": [
+          "http"
+     ],
+     "paths": {
+          "/shares/api/v1/analy.analy_code": {
+               "post": {
+                    "tags": [
+                         "Analy"
+                    ],
+                    "summary": "",
+                    "description": "",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.add_group": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "添加一个组织",
+                    "description": "添加一个组织",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "添加一个组织",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.add_my_code": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "给自己添加一个监听",
+                    "description": "给自己添加一个监听",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "给自己添加一个监听",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.dayliy": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "",
+                    "description": "",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.delete_my_code": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "删除一个监听",
+                    "description": "删除一个监听",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "删除一个监听",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.get_all_code_name": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "获取所有中文",
+                    "description": "获取所有中文",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取所有中文",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.get_group": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "获取分组",
+                    "description": "获取分组",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取分组",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.get_msg": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "获取消息",
+                    "description": "获取消息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取消息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.get_my_code": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "",
+                    "description": "",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.get_my_group": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "获取我的组织",
+                    "description": "获取我的组织",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取我的组织",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.gets": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "精确查找代码",
+                    "description": "精确查找代码",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "精确查找代码",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.have_new_msg": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "",
+                    "description": "",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.minute": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "获取分时图",
+                    "description": "获取分时图",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取分时图",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.search": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "搜索",
+                    "description": "搜索",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "搜索",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/shares.upset_group_code": {
+               "post": {
+                    "tags": [
+                         "Shares"
+                    ],
+                    "summary": "",
+                    "description": "",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/weixin.get_qrcode": {
+               "post": {
+                    "tags": [
+                         "Weixin"
+                    ],
+                    "summary": "获取微信二维码",
+                    "description": "获取微信二维码",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取微信二维码",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/weixin.get_user_info": {
+               "post": {
+                    "tags": [
+                         "Weixin"
+                    ],
+                    "summary": "",
+                    "description": "",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/weixin.oauth": {
+               "post": {
+                    "tags": [
+                         "Weixin"
+                    ],
+                    "summary": "微信授权获取登录信息",
+                    "description": "微信授权获取登录信息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "微信授权获取登录信息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/weixin.re_login": {
+               "post": {
+                    "tags": [
+                         "Weixin"
+                    ],
+                    "summary": "是否要重新登录",
+                    "description": "是否要重新登录",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "是否要重新登录",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/weixin.update_user_info": {
+               "post": {
+                    "tags": [
+                         "Weixin"
+                    ],
+                    "summary": "更新用户信息",
+                    "description": "更新用户信息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "更新用户信息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/shares/api/v1/weixin.upset_user_info": {
+               "post": {
+                    "tags": [
+                         "Weixin"
+                    ],
+                    "summary": "更新用户信息",
+                    "description": "更新用户信息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "更新用户信息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/GetsReq"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          }
+     },
+     "securityDefinitions": {},
+     "definitions": {
+          "AddGroupReq": {
+               "type": "object",
+               "properties": {
+                    "key": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "分组key"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AddMyCodeReq": {
+               "type": "object",
+               "properties": {
+                    "ai": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "AI智能提醒"
+                    },
+                    "code": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "股票代码"
+                    },
+                    "color": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "颜色"
+                    },
+                    "down": {
+                         "type": "integer",
+                         "format": "float64",
+                         "description": "估价跌到"
+                    },
+                    "downPercent": {
+                         "type": "integer",
+                         "format": "float64",
+                         "description": "跌幅超"
+                    },
+                    "ext": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "后缀"
+                    },
+                    "kdj": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "日线金叉提醒"
+                    },
+                    "kdj20": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "20日线提醒"
+                    },
+                    "name": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "股票名字"
+                    },
+                    "percent": {
+                         "type": "integer",
+                         "format": "float64",
+                         "description": "百分比"
+                    },
+                    "price": {
+                         "type": "integer",
+                         "format": "float64",
+                         "description": "当前价格"
+                    },
+                    "public": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否推荐给组织"
+                    },
+                    "simpleCode": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "股票代码简写// 返回值用"
+                    },
+                    "slump": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "盘中急跌提醒"
+                    },
+                    "surge": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "盘中急涨提醒"
+                    },
+                    "up": {
+                         "type": "integer",
+                         "format": "float64",
+                         "description": "估价涨到"
+                    },
+                    "upPercent": {
+                         "type": "integer",
+                         "format": "float64",
+                         "description": "涨幅超"
+                    },
+                    "vaild": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否有效"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AnalyCodeReq": {
+               "type": "object",
+               "properties": {
+                    "code": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "股票代码"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "CodeReq": {
+               "type": "object",
+               "properties": {
+                    "code": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "股票代码"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "DeleteMyCodeReq": {
+               "type": "object",
+               "properties": {
+                    "code": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "股票代码"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetMyCodeReq": {
+               "type": "object",
+               "properties": {
+                    "code": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "股票代码"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetQrcodeReq": {
+               "type": "object",
+               "properties": {
+                    "page": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "小程序页面头部"
+                    },
+                    "scene": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "附带参数"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetsReq": {
+               "type": "object",
+               "properties": {
+                    "codes": {
+                         "type": "object",
+                         "format": "array",
+                         "description": "股票代码"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "OauthReq": {
+               "type": "object",
+               "properties": {
+                    "isUpdateUser": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否更新用户"
+                    },
+                    "jscode": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "微信端jscode"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "SearchReq": {
+               "type": "object",
+               "properties": {
+                    "code": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "股票代码"
+                    },
+                    "tag": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "标记(min,daily)"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "UpsetGroupCodeReq": {
+               "type": "object",
+               "properties": {
+                    "code": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "股票代码"
+                    },
+                    "groupName": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "分组名"
+                    },
+                    "isAdd": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否添加,false:删除"
+                    },
+                    "userName": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "推荐人"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "UpsetUserInfoReq": {
+               "type": "object",
+               "properties": {
+                    "key": {
+                         "type": "string",
+                         "format": "string",
+                         "description": ""
+                    },
+                    "value": {
+                         "type": "string",
+                         "format": "string",
+                         "description": ""
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "WxUserinfo": {
+               "type": "object",
+               "properties": {
+                    "avatarURL": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户头像，最后一个数值代表正方形头像大小（有0、46、64、96、132数值可选，0代表640*640正方形头像），用户没有头像时该项为空。若用户更换头像，原有头像URL将失效。"
+                    },
+                    "city": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户所在城市"
+                    },
+                    "country": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户所在国家"
+                    },
+                    "gender": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户的性别，值为1时是男性，值为2时是女性，值为0时是未知"
+                    },
+                    "language": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户的语言，简体中文为zh_CN"
+                    },
+                    "nickName": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户昵称"
+                    },
+                    "province": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户所在省份"
+                    },
+                    "sessionID": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户sessionid 用于当前交互使用"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          }
+     },
+     "externalDocs": {
+          "description": "Find out more about Swagger",
+          "url": "https://github.com/xxjwxc/public"
+     }
+}

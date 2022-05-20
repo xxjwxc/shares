@@ -1,0 +1,38 @@
+NAME := shares
+APIDOCDIR := ../apidoc#文档目录
+RPCCDIR := $(APIDOCDIR)/rpc#rpc输出目录
+
+BUILDSHELLFILE :=`ls $(APIDOCDIR)/proto/$(NAME)/*.proto | cut -d'/' -f5`
+COMMSHELLFILE :=`ls $(APIDOCDIR)/proto/common/*.proto | cut -d'/' -f5`
+
+gen_proto: gen_build gen_base
+clean_proto:
+	rm -f rpc/common/*.pb.go
+gen_build:# 自定义注册
+	@mkdir -p rpc/$(NAME)
+	@echo "gen_build proto"
+	@rm -f rpc/$(NAME)/*.pb.go
+	@rm -f rpc/$(NAME)/*.pb.gmsec.go
+	@for file in $(BUILDSHELLFILE); do \
+	 echo build $$file; \
+	 protoc --proto_path="$(APIDOCDIR)/proto/" --gmsec_out=plugins=gmsec:./ $(NAME)/$$file; \
+	done;
+	@sed -i "" 's/,omitempty//g' ./rpc/$(NAME)/*.pb.go # 开始取消json omitempty
+	cp -rf ./rpc/$(NAME)/ $(RPCCDIR)/ # 子目录向父目录拷贝
+	#@sed -i 's#common "rpc/common"#common "$(NAME)/rpc/common"#g' ./rpc/$(NAME)/*.pb.go #开始替换common包
+	#@sed -i 's#common "rpc/common"#common "$(NAME)/rpc/common"#g' ./rpc/$(NAME)/*.pb.gmsec.go #开始替换common包
+	#@sed -i 's#_ "rpc/common"#_ "$(NAME)/rpc/common"#g' ./rpc/$(NAME)/*.pb.go #开始替换common包
+	#@sed -i 's#_ "rpc/common"#_ "$(NAME)/rpc/common"#g' ./rpc/$(NAME)/*.pb.gmsec.go #开始替换common包
+ 
+gen_base:# 基础库
+	@mkdir -p $(RPCCDIR)/common
+	@echo "gen proto"
+	@rm -f rpc/common/*.pb.go
+	@rm -f rpc/common/*.pb.gmsec.go
+	@for file in $(COMMSHELLFILE); do \
+	 echo base $$file; \
+	 protoc --proto_path="$(APIDOCDIR)/proto/" --gmsec_out=plugins=gmsec:$(APIDOCDIR)/ common/$$file; \
+	done;
+	@sed -i '' 's/,omitempty//g' $(RPCCDIR)/common/*.pb.go #开始取消json omitempty
+	#cp -rf $(RPCCDIR)/common/ ./rpc/ #父目录向当前目录拷贝
+	

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#B4E6FB">
+		<title>行情</title>
+	</head>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.Kline-div {
+			position: fixed;
+			width: 100%;
+			bottom: 0rem;
+			top: 0;
+		}
+
+		.Kline-div .m-line {
+			height: 99%;
+			width: 100%;
+			margin-bottom: 1%; 
+		}
+
+		.Kline-div .K-line {
+			height: 50%;
+			width: 100%;
+		}
+	</style>
+	<body>
+		<div id="Kline-div" class="Kline-div">
+			<div id="m-line" class="m-line"></div>
+			<!-- <div id="k-content" class="m-line"></div> -->
+		</div>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/km-line.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var mChart = echarts.init(document.getElementById('m-line'));
+			window.onload = function() {
+				var interval = null;
+				var code = getQueryVariable("code");
+				if (code === "") {
+					return;
+				}
+				var rg = getQueryVariable("rg");
+				if (rg === "true") { //设置涨跌颜色
+					setColor("#F9293E", "#00aa3b");
+				}
+				var only20 = (getQueryVariable("only20") === "true")
+
+				var tag = getQueryVariable("tag"); // 判断日线还是分时线
+				if (tag === "daily") { // 日key
+					$.ajax({
+						type: 'POST',
+						url: '/shares/api/v1/shares.dayliy', // /shares/api/v1/shares.minute
+						contentType: "application/json;charset=utf-8",
+						data: JSON.stringify({
+							"code": code
+						}),
+						dataType: "json",
+						success: function(result) {
+							mChart.setOption(initKOption(result.data,only20));
+						}
+					});
+				} else if (tag === "min") { // 分时
+					dealMinute(code)
+					interval = setInterval(function() {dealMinute(code)}, 30000);
+				}
+				// mChart.setOption(initKOption(kdata));
+				// setInterval(function(){ alert("Hello"); }, 3000);
+				// var kChart = echarts.init(document.getElementById('m-line'));  
+			}
+
+			function getQueryVariable(variable) {
+				var query = window.location.search.substring(1);
+				var vars = query.split("&");
+				for (var i = 0; i < vars.length; i++) {
+					var pair = vars[i].split("=");
+					if (pair[0] == variable) {
+						return pair[1];
+					}
+				}
+				return (false);
+			}
+
+			function dealMinute(code) {
+				$.ajax({
+					type: 'POST',
+					url: '/shares/api/v1/shares.minute', // /shares/api/v1/shares.minute
+					contentType: "application/json;charset=utf-8",
+					data: JSON.stringify({
+						"code": code
+					}),
+					dataType: "json",
+					success: function(result) {
+						if (result.data.ref == false) {
+							clearInterval(interval);
+						}
+						mChart.setOption(initMOption(result.data, 'hs'));
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#B4E6FB"> 
+		<title>行情</title>  
+	</head>
+<style type="text/css">   
+	body{margin: 0;padding: 0;} 
+	.Kline-div{
+		position: fixed;width: 100%;
+		bottom: 0rem;top: 0; 
+	}
+	.Kline-div .m-line{height: 100%;width: 100%;margin-bottom: 1%;} 
+	.Kline-div .K-line{height: 50%;width: 100%;}   
+</style>  
+	<body> 
+		<div id="Kline-div" class="Kline-div">  
+				<!-- <div id="m-line" class="m-line"></div> -->
+				<div id="m-line" class="m-line"></div>
+		</div> 
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>   
+		<script src="js/tmpData.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/km-line.js" type="text/javascript" charset="utf-8"></script>
+		<script>   
+				// var mChart = echarts.init(document.getElementById('m-line'));
+				// mChart.setOption(initMOption(mdata,'hs'));
+				
+				var kChart = echarts.init(document.getElementById('m-line')); 
+				kChart.setOption(initKOption(kdata)); 
+		</script>
+	</body>
+</html>

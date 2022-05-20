@@ -1,0 +1,99 @@
+syntax = "proto3"; // 指定proto版本
+
+package shares;     // 指定包名
+import "common/common_public.proto";
+
+option go_package = "rpc/shares"; // 指定路径
+
+
+// 微信相关服务
+service Weixin {
+    // Oauth 微信授权获取登录信息
+    rpc Oauth(OauthReq) returns (OauthResp) {}
+
+	// UpdateUserInfo 更新用户信息
+    rpc UpdateUserInfo(WxUserinfo) returns (common.Empty) {}
+
+	// GetQrcode 获取微信二维码
+	rpc GetQrcode(GetQrcodeReq) returns (GetQrcodeResp){}
+
+	// GetUserInfo 获取用户信息
+	rpc GetUserInfo(common.Empty) returns (GetUserInfoResp){}
+
+	// UpsetUserInfo 更新用户信息
+	rpc UpsetUserInfo(UpsetUserInfoReq) returns (common.Empty) {}
+
+	// ReLogin 是否要重新登录
+	rpc ReLogin(common.Empty) returns (ReLoginResp){}
+
+}
+
+
+// OauthReq 请求结构
+message OauthReq {
+    string jscode = 1; // 微信端jscode
+	bool isUpdateUser = 2;// 是否更新用户 
+}
+
+// OauthResp 微信授权返回信息
+message OauthResp {
+    string sessionId = 1;// 用户sessionid 用于当前交互使用
+    string openId = 2;// openid
+	int64 overdueTime = 3;// 逾期时间点(时间戳)
+}
+
+// WxUserinfo 用户信息
+message WxUserinfo {
+	string sessionID = 1; // 用户sessionid 用于当前交互使用
+	string nickName = 2; //用户昵称
+	string avatarURL = 3; //用户头像，最后一个数值代表正方形头像大小（有0、46、64、96、132数值可选，0代表640*640正方形头像），用户没有头像时该项为空。若用户更换头像，原有头像URL将失效。
+	string gender =  4; //用户的性别，值为1时是男性，值为2时是女性，值为0时是未知
+	string city   = 5;  //用户所在城市
+	string province = 6;   //用户所在省份
+	string country = 7;    //用户所在国家
+	string language  = 8;   //用户的语言，简体中文为zh_CN
+}
+
+// WxUserinfoResp 用户信息返回
+message WxUserinfoResp{
+    bool b = 1;
+}
+
+// GetQrcodeResp 获取二维码
+message GetQrcodeReq{
+	string page = 1;// 小程序页面头部
+	string scene = 2;// 附带参数
+}
+
+// GetQrcodeResp 获取二维码
+message GetQrcodeResp{
+	string url = 1;// 二维码图片地址
+}
+
+// GetUserInfoResp 用户信息
+message GetUserInfoResp{
+	string  openid  = 1;// 用户openid   
+	string  nickName = 2;// 用户昵称 
+	string  avatarURL = 3;// 用户头像地址
+	string  gender = 4;// 用户的性别
+	string  city  = 5;// 用户所在城市    
+	string  province  = 6;// 用户所在省份
+	string  country  =7; // 用户所在国家 
+	string  phone   = 8;// 用户手机号  
+	string  group =9;// 用户所在分组列表    
+	bool    rg   = 10;// 是否涨绿跌红
+	bool 	only20 = 11;// 是否20日线     
+	int32   capacity = 12;// 可用容量 
+ }
+ 
+ message UpsetUserInfoReq{
+	 string key = 1;
+	 string value = 2;
+ }
+
+ message ReLoginResp{
+	 bool relogin = 1;// 是否重新登录:true 重新登录
+	 string sessionId = 2;// 用户sessionid 用于当前交互使用
+	 string openId = 3;// openid
+	 int64 overdueTime = 4;// 逾期时间点(时间戳)
+ }

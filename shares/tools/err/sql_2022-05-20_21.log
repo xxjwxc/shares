@@ -1,0 +1,1472 @@
+=========================2022-05-20 21:03:49 ========================= 
+
+2022/05/20 21:03:49 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[14.689ms] [rows:-] show keys from `analy_cd_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000ca260, {0xc0005763c0, 0x1d5}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc0002534a0, 0x1b?, {0xc000176000, 0x1be})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc0002534a0, {0x46ba5ae?, 0x4c32320?}, {0xc00007f360?, 0xc00061ef20?, 0xc0004819a0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc0002534a0}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000021230, {0x45f7900, 0xc00011a3d8})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc0001829e0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000a40a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:03:49 ========================= 
+
+2022/05/20 21:03:49 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[14.872ms] [rows:-] show FULL COLUMNS from `analy_cd_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000ca260, {0xc000576960, 0x1dd}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc0002534a0, 0x1b?, {0xc000576780, 0x1c6})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc0002534a0, {0x46ba5ae?, 0x4c32320?}, {0xc00007f400?, 0xc00061ef20?, 0xc000031600?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc0002534a0}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000021320, {0x45f7880, 0xc00011a438})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc0001829e0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000a40a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:03:49 ========================= 
+
+2022/05/20 21:03:49 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[15.546ms] [rows:-] show keys from `analy_tdx_after_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000ca260, {0xc00019fa00, 0x1ea}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc0002534a0, 0x1b?, {0xc000576d20, 0x1d3})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc0002534a0, {0x46ba5ae?, 0x4c32320?}, {0xc00049cbe0?, 0x10061ef20?, 0xc000031fc0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc0002534a0}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc00049ac90, {0x45f7900, 0xc000219a58})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc0000fda40, 0x14})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000a40a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:03:49 ========================= 
+
+2022/05/20 21:03:49 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[15.052ms] [rows:-] show FULL COLUMNS from `analy_tdx_after_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000ca260, {0xc00019fe00, 0x1f2}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc0002534a0, 0x1b?, {0xc000576f00, 0x1db})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc0002534a0, {0x46ba5ae?, 0x4c32320?}, {0xc00049cc80?, 0xc00061ef20?, 0xc0004ae0c0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc0002534a0}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc00049ad20, {0x45f7880, 0xc000219ab8})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc0000fda40, 0x14})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000a40a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:03:49 ========================= 
+
+2022/05/20 21:03:49 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[15.809ms] [rows:-] show keys from `analy_up_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000ca260, {0xc0005770e0, 0x1d5}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc0002534a0, 0x1b?, {0xc0001761c0, 0x1be})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc0002534a0, {0x46ba5ae?, 0x4c32320?}, {0xc00049d450?, 0xc00061ef20?, 0xc0000c8820?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc0002534a0}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc00049b4a0, {0x45f7900, 0xc00055c828})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000182bf0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000a40a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:03:49 ========================= 
+
+2022/05/20 21:03:49 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[14.588ms] [rows:-] show FULL COLUMNS from `analy_up_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000ca260, {0xc000577680, 0x1dd}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc0002534a0, 0x1b?, {0xc0005774a0, 0x1c6})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc0002534a0, {0x46ba5ae?, 0x4c32320?}, {0xc00049d4f0?, 0xc00061ef20?, 0xc0004ae4c0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc0002534a0}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc00049b530, {0x45f7880, 0xc00055c888})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000182bf0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000a40a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:03:49 ========================= 
+
+2022/05/20 21:03:49 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[15.883ms] [rows:-] show keys from `analy_tdx_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000ca260, {0xc000577c20, 0x1d8}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc0002534a0, 0x1b?, {0xc000577a40, 0x1c1})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc0002534a0, {0x46ba5ae?, 0x4c32320?}, {0xc00049d630?, 0xc00061ef20?, 0xc0000c88e0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc0002534a0}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc00049b650, {0x45f7900, 0xc00055c930})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000182bb0, 0xe})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000a40a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:03:49 ========================= 
+
+2022/05/20 21:03:49 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[15.368ms] [rows:-] show FULL COLUMNS from `analy_tdx_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000ca260, {0xc00056c1e0, 0x1e0}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc0002534a0, 0x1b?, {0xc00056c000, 0x1c9})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc0002534a0, {0x46ba5ae?, 0x4c32320?}, {0xc00049d6d0?, 0xc00061ef20?, 0xc0004ae5c0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc0002534a0}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc00049b6e0, {0x45f7880, 0xc00055c990})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000182bb0, 0xe})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000a40a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:04:43 ========================= 
+
+2022/05/20 21:04:43 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[14.694ms] [rows:-] show keys from `analy_tdx_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0004ac3c0, 0x1d8}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00028a050, 0x1b?, {0xc0004ac000, 0x1c1})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00028a050, {0x46ba5ae?, 0x4c32320?}, {0xc0004a40f0?, 0xc00061ef20?, 0xc00025fa80?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00028a050}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0002210b0, {0x45f7900, 0xc0002fe210})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000027ed0, 0xe})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:04:43 ========================= 
+
+2022/05/20 21:04:43 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[14.058ms] [rows:-] show FULL COLUMNS from `analy_tdx_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0004ac960, 0x1e0}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00028a050, 0x1b?, {0xc0004ac780, 0x1c9})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00028a050, {0x46ba5ae?, 0x4c32320?}, {0xc0004a4190?, 0xc00061ef20?, 0xc0001cf580?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00028a050}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000221290, {0x45f7880, 0xc0002fe270})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000027ed0, 0xe})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:04:44 ========================= 
+
+2022/05/20 21:04:44 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[14.207ms] [rows:-] show keys from `analy_tdx_after_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc00063e400, 0x1ea}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00028a050, 0x1b?, {0xc0004acb40, 0x1d3})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00028a050, {0x46ba5ae?, 0x4c32320?}, {0xc0004a5f40?, 0x10061ef20?, 0xc0000308c0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00028a050}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0002a4d20, {0x45f7900, 0xc0006396b0})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000034480, 0x14})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:04:44 ========================= 
+
+2022/05/20 21:04:44 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[14.103ms] [rows:-] show FULL COLUMNS from `analy_tdx_after_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc00063e800, 0x1f2}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00028a050, 0x1b?, {0xc0004acd20, 0x1db})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00028a050, {0x46ba5ae?, 0x4c32320?}, {0xc00064a000?, 0xc00061ef20?, 0xc000030940?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00028a050}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0002a4db0, {0x45f7880, 0xc000639710})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000034480, 0x14})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:04:44 ========================= 
+
+2022/05/20 21:04:44 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[13.774ms] [rows:-] show keys from `analy_cd_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0004acf00, 0x1d5}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00028a050, 0x1b?, {0xc000670000, 0x1be})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00028a050, {0x46ba5ae?, 0x4c32320?}, {0xc00064ac30?, 0xc00061ef20?, 0xc00002cdc0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00028a050}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc00064ca80, {0x45f7900, 0xc000668528})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000027ae0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:04:44 ========================= 
+
+2022/05/20 21:04:44 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[14.243ms] [rows:-] show FULL COLUMNS from `analy_cd_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0004ad4a0, 0x1dd}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00028a050, 0x1b?, {0xc0004ad2c0, 0x1c6})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00028a050, {0x46ba5ae?, 0x4c32320?}, {0xc00064acd0?, 0xc00061ef20?, 0xc000030fc0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00028a050}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc00064cb10, {0x45f7880, 0xc000668588})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000027ae0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:04:45 ========================= 
+
+2022/05/20 21:04:45 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[13.834ms] [rows:-] show keys from `analy_up_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0004ad860, 0x1d5}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00028a050, 0x1b?, {0xc0006701c0, 0x1be})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00028a050, {0x46ba5ae?, 0x4c32320?}, {0xc0006a6410?, 0xc00061ef20?, 0xc0006ac0e0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00028a050}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0006ae180, {0x45f7900, 0xc0006a9560})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000027ff0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:04:45 ========================= 
+
+2022/05/20 21:04:45 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[14.024ms] [rows:-] show FULL COLUMNS from `analy_up_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0004ade00, 0x1dd}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00028a050, 0x1b?, {0xc0004adc20, 0x1c6})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00028a050, {0x46ba5ae?, 0x4c32320?}, {0xc0006a64b0?, 0xc00061ef20?, 0xc000031bc0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00028a050}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0006ae210, {0x45f7880, 0xc0006a95c0})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000027ff0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:12 ========================= 
+
+2022/05/20 21:06:12 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[13.523ms] [rows:-] show keys from `analy_tdx_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0000bc3c0, 0x1d8}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc000602370, 0x1b?, {0xc0000bc000, 0x1c1})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc000602370, {0x46ba5ae?, 0x4c32320?}, {0xc0006024b0?, 0xc00069ef20?, 0xc000614440?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc000602370}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0002acff0, {0x45f7900, 0xc00062ef78})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc0000a2f60?, 0xc00069fad0, {0xc000617f00, 0xe})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00069fad0?, 0xc00069fad0, 0xc00069fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:12 ========================= 
+
+2022/05/20 21:06:12 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[13.155ms] [rows:-] show FULL COLUMNS from `analy_tdx_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0000bc960, 0x1e0}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc000602370, 0x1b?, {0xc0000bc780, 0x1c9})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc000602370, {0x46ba5ae?, 0x4c32320?}, {0xc000602550?, 0xc00069ef20?, 0xc00061e240?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc000602370}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0002ad110, {0x45f7880, 0xc00062efd8})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc0000a2f60?, 0xc00069fad0, {0xc000617f00, 0xe})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00069fad0?, 0xc00069fad0, 0xc00069fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:12 ========================= 
+
+2022/05/20 21:06:12 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.860ms] [rows:-] show keys from `analy_cd_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0000bcb40, 0x1d5}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc000602370, 0x1b?, {0xc0000dc000, 0x1be})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc000602370, {0x46ba5ae?, 0x4c32320?}, {0xc00007e1e0?, 0xc00069ef20?, 0xc0006146e0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc000602370}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0002ada10, {0x45f7900, 0xc0000d8d38})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00069fa38?, 0xc00069fad0, {0xc000617e10, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00069fad0?, 0xc00069fad0, 0xc00069fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:12 ========================= 
+
+2022/05/20 21:06:12 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.404ms] [rows:-] show FULL COLUMNS from `analy_cd_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0000bd0e0, 0x1dd}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc000602370, 0x1b?, {0xc0000bcf00, 0x1c6})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc000602370, {0x46ba5ae?, 0x4c32320?}, {0xc00007e280?, 0xc00069ef20?, 0xc00061e540?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc000602370}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0002adaa0, {0x45f7880, 0xc0000d8d98})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00069fa38?, 0xc00069fad0, {0xc000617e10, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00069fad0?, 0xc00069fad0, 0xc00069fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:12 ========================= 
+
+2022/05/20 21:06:12 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[13.575ms] [rows:-] show keys from `analy_tdx_after_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0000f5c00, 0x1ea}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc000602370, 0x1b?, {0xc0000bd4a0, 0x1d3})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc000602370, {0x46ba5ae?, 0x4c32320?}, {0xc00007fa40?, 0x10069ef20?, 0xc00061f080?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc000602370}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000601920, {0x45f7900, 0xc00027ed08})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00069fa38?, 0xc00069fad0, {0xc000612858, 0x14})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00069fad0?, 0xc00069fad0, 0xc00069fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:12 ========================= 
+
+2022/05/20 21:06:12 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.686ms] [rows:-] show FULL COLUMNS from `analy_tdx_after_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0002b6000, 0x1f2}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc000602370, 0x1b?, {0xc0000bd680, 0x1db})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc000602370, {0x46ba5ae?, 0x4c32320?}, {0xc00007fae0?, 0xc00069ef20?, 0xc00061f100?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc000602370}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0006019b0, {0x45f7880, 0xc00027ed68})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00069fa38?, 0xc00069fad0, {0xc000612858, 0x14})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00069fad0?, 0xc00069fad0, 0xc00069fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:13 ========================= 
+
+2022/05/20 21:06:13 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.482ms] [rows:-] show keys from `analy_up_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0000bd860, 0x1d5}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc000602370, 0x1b?, {0xc0000dc1c0, 0x1be})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc000602370, {0x46ba5ae?, 0x4c32320?}, {0xc0006b6c80?, 0xc00069ef20?, 0xc00002c4c0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc000602370}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000264f30, {0x45f7900, 0xc0006ceca8})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00069fa38?, 0xc00069fad0, {0xc000617f40, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00069fad0?, 0xc00069fad0, 0xc00069fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:13 ========================= 
+
+2022/05/20 21:06:13 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.544ms] [rows:-] show FULL COLUMNS from `analy_up_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc00007a280, {0xc0000bde00, 0x1dd}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc000602370, 0x1b?, {0xc0000bdc20, 0x1c6})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc000602370, {0x46ba5ae?, 0x4c32320?}, {0xc0006b6d20?, 0xc00069ef20?, 0xc000030bc0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc000602370}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000265080, {0x45f7880, 0xc0006ced08})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00069fa38?, 0xc00069fad0, {0xc000617f40, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00069fad0?, 0xc00069fad0, 0xc00069fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000200d0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:16 ========================= 
+
+2022/05/20 21:06:16 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.289ms] [rows:-] show keys from `analy_cd_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000d2260, {0xc0005d03c0, 0x1d5}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00007d450, 0x1b?, {0xc0005da000, 0x1be})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00007d450, {0x46ba5ae?, 0x4c32320?}, {0xc00007d590?, 0xc00061ef20?, 0xc000239700?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00007d450}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000021a40, {0x45f7900, 0xc00000f350})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc000021560?, 0xc00061fad0, {0xc0001829b0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000ac0a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:16 ========================= 
+
+2022/05/20 21:06:16 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_cd_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.424ms] [rows:-] show FULL COLUMNS from `analy_cd_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000d2260, {0xc0005d0960, 0x1dd}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00007d450, 0x1b?, {0xc0005d0780, 0x1c6})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00007d450, {0x46ba5ae?, 0x4c32320?}, {0xc00007d630?, 0xc00061ef20?, 0xc000190d40?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00007d450}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000021b00, {0x45f7880, 0xc00000f3b0})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc000021560?, 0xc00061fad0, {0xc0001829b0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000ac0a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:17 ========================= 
+
+2022/05/20 21:06:17 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.098ms] [rows:-] show keys from `analy_up_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000d2260, {0xc0005d0d20, 0x1d5}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00007d450, 0x1b?, {0xc0005da1c0, 0x1be})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00007d450, {0x46ba5ae?, 0x4c32320?}, {0xc000253180?, 0xc00061ef20?, 0xc0002398c0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00007d450}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000274e10, {0x45f7900, 0xc0000c2be8})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000182bc0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000ac0a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:17 ========================= 
+
+2022/05/20 21:06:17 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_up_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.917ms] [rows:-] show FULL COLUMNS from `analy_up_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000d2260, {0xc0005d12c0, 0x1dd}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00007d450, 0x1b?, {0xc0005d10e0, 0x1c6})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00007d450, {0x46ba5ae?, 0x4c32320?}, {0xc000253220?, 0xc00061ef20?, 0xc000191000?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00007d450}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000274f30, {0x45f7880, 0xc0000c2c48})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000182bc0, 0xd})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000ac0a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:17 ========================= 
+
+2022/05/20 21:06:17 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.516ms] [rows:-] show keys from `analy_tdx_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000d2260, {0xc0005d1860, 0x1d8}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00007d450, 0x1b?, {0xc0005d1680, 0x1c1})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00007d450, {0x46ba5ae?, 0x4c32320?}, {0xc000253360?, 0xc00061ef20?, 0xc000239980?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00007d450}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000275290, {0x45f7900, 0xc0000c2cf0})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000182b40, 0xe})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000ac0a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:17 ========================= 
+
+2022/05/20 21:06:17 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.521ms] [rows:-] show FULL COLUMNS from `analy_tdx_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000d2260, {0xc0005d1e00, 0x1e0}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00007d450, 0x1b?, {0xc0005d1c20, 0x1c9})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00007d450, {0x46ba5ae?, 0x4c32320?}, {0xc000253400?, 0xc00061ef20?, 0xc000191100?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00007d450}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc000275320, {0x45f7880, 0xc0000c2d50})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000182b40, 0xe})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000ac0a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:17 ========================= 
+
+2022/05/20 21:06:17 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.726ms] [rows:-] show keys from `analy_tdx_after_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000d2260, {0xc0001a5c00, 0x1ea}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00007d450, 0x1b?, {0xc00027e000, 0x1d3})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00007d450, {0x46ba5ae?, 0x4c32320?}, {0xc0000c9db0?, 0x10061ef20?, 0xc0000bebc0?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00007d450}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0001e8f90, {0x45f7900, 0xc0002660c0})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000035518, 0x14})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:125 +0x199
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000ac0a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================
+=========================2022-05-20 21:06:17 ========================= 
+
+2022/05/20 21:06:17 /Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them; Error 1356: View 'shares_tmp_db.analy_tdx_after_view' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[12.085ms] [rows:-] show FULL COLUMNS from `analy_tdx_after_view`
+
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
+github.com/xxjwxc/public/mylog.(*errDeal).SaveError(0xc0000d2260, {0xc000458000, 0x1f2}, {0x46a8798, 0x3})
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/common.go:38 +0x250
+github.com/xxjwxc/public/mylog.SaveError(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mylog/mylog.go:85
+github.com/xxjwxc/public/mysqldb.DbLog.Write(...)
+	/Users/xxj/work/path/pkg/mod/github.com/xxjwxc/public@v0.0.0-20210709073023-f6ec6fb9bcb4/mysqldb/log.go:18
+log.(*Logger).Output(0xc00007d450, 0x1b?, {0xc00027e1e0, 0x1db})
+	/usr/local/go/src/log/log.go:195 +0x368
+log.(*Logger).Printf(0xc00007d450, {0x46ba5ae?, 0x4c32320?}, {0xc0000c9e50?, 0xc00061ef20?, 0xc0000bec40?})
+	/usr/local/go/src/log/log.go:205 +0x5d
+gorm.io/gorm/logger.logger.Trace({{0x4795480, 0xc00007d450}, {0x3b9aca00, 0x0, 0x2}, {0x46ae581, 0xa}, {0x46ae58b, 0xa}, {0x46af1ca, ...}, ...}, ...)
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/logger/logger.go:144 +0x26a
+gorm.io/gorm.(*DB).Scan(0xc0001e9110, {0x45f7880, 0xc000266120})
+	/Users/xxj/work/path/pkg/mod/gorm.io/gorm@v1.21.4/finisher_api.go:476 +0x3b2
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getTableElement(0xc00061fa38?, 0xc00061fad0, {0xc000035518, 0x14})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:134 +0x265
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).getPackageInfo(0xc00061fad0?, 0xc00061fad0, 0xc00061fb20)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:108 +0x2a7
+github.com/xxjwxc/gormt/data/view/model/genmysql.(*mysqlModel).GenModel(0x408e4b1?)
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/model/genmysql/genmysql.go:27 +0xd6
+github.com/xxjwxc/gormt/data/view/gtools.showCmd()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:48 +0xb8
+github.com/xxjwxc/gormt/data/view/gtools.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/view/gtools/gtools.go:25 +0x2c
+github.com/xxjwxc/gormt/data/cmd.glob..func1(0x4c023e0?, {0x46a8e1e?, 0x2?, 0x2?})
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:23 +0x17
+github.com/spf13/cobra.(*Command).execute(0x4c023e0, {0xc0000ac0a0, 0x2, 0x2})
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:846 +0x663
+github.com/spf13/cobra.(*Command).ExecuteC(0x4c023e0)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:950 +0x39c
+github.com/spf13/cobra.(*Command).Execute(...)
+	/Users/xxj/work/path/pkg/mod/github.com/spf13/cobra@v1.0.0/command.go:887
+github.com/xxjwxc/gormt/data/cmd.Execute()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/data/cmd/cmd.go:31 +0x25
+main.main()
+	/Users/xxj/work/workspace/github/xxjwxc/gormt/main.go:6 +0x17
+
+=========================end=========================

@@ -1,0 +1,34 @@
+base:
+    is_dev : true
+    serial_number : 1.0.0
+    service_name : shares
+    service_displayname : sharesserver
+    sercice_desc : shares微服务
+tools_type: 1 # 0:正式环境,1:日分析,2:抓取消息,3:放量
+db_info:
+    port : 3306
+    username : root
+    host : 175.24.103.30
+    password : Xxjwxc@123456
+    database : shares_db
+    type: 0 # 数据库类型:0:mysql , 1:sqlite , 2:mssql
+redis_info:
+    addrs: ["127.0.0.1:6379"]
+    password: 123456
+    group_name: oauth2
+    db: 0
+etcd_info:
+    addrs: ["127.0.0.1:2379"]
+    timeout: 3
+wx_info:
+    app_id : wx6314e23378f3b31a
+    app_secret : aba086934ec27bc1d4e15bc02be7633d
+    api_key : adf2a407283e59ddd08dc5e27820d7d1
+    mch_id : 1600841165
+    notify_url : http://www.xxjwxc.cn
+    shear_url : 
+port: 82
+file_host: https://hospital.xxjwxc.cn/shares/api/v1
+max_capacity : 5
+def_group: 默认指标
+ext : [sh,sz,hk,]
