@@ -5,10 +5,10 @@
 - A股量化交易系统
 - 后台开发语言 Go  [gmsec](https://github.com/gmsec/gmsec)
 - gormt 嵌入，自动数据库代码生成 [gorm 自动构建(gormt)](https://github.com/xxjwxc/gormt)
-- 分时任务,每日监控,微信提醒功能，公众号
+- 分时任务,盯盘助手,研报股评,每日监控,微信提醒，玩转组织，AI智能
 - uniapp 小程序端
 
-### 欢迎扫码使用
+### 欢迎微信扫码体验
 
 ![show](/image/0.png)
 
@@ -51,11 +51,12 @@ sudo ./shares run
 - 服务配置
 ```yaml
 base:
-    serial_number: "v1" # 版本号
-    service_name: "shares" # 服务名
-    service_displayname: "shares" # 服务显示名
-    sercice_desc: "shares" # 描述
-    is_dev: true
+    is_dev : true
+    serial_number : 1.0.0
+    service_name : shares
+    service_displayname : sharesserver
+    sercice_desc : shares微服务
+tools_type: 4 # 0:正式环境,1:日分析,2:抓取消息,3:放量,4:放量监听
 mysql_info:
     port : 3306 # 端口号
     username : root # 用户名
@@ -64,27 +65,26 @@ mysql_info:
     # host : localhost
     # password : qwer
     database : caoguo_dev # 数据库名
-kdniao: # 快递鸟配置
-    business_id : 1317777
-    app_key : 111111-2222-3333-4444-555555555
-email: # 发邮件配置
-    user: xie1xiao1jun@126.com
-    password: pppppppppppppp
-    host: smtp.126.com:25
-wx_info: # 微信相关配置
-    app_id : wxc111111111111
-    app_secret : 111111111111111111111
-    api_key : 1111111111111111111111111
-    mch_id : 1111111111111111
-    notify_url : http://www.xxjwxc.cn
-    shear_url : ""
-file_host: https://localhost/commcn/api/v1
-oauth2_url: http://localhost/oauth2/api/v1
-register_url: http://localhost/register/api/v1
-token_type: nomal
-app_id: wwwthings
-app_secret: 4EE0A9A43B9B911C067BEE5CC50A9972
-port : 8001
+redis_info:
+    addrs: ["127.0.0.1:6379"]
+    password: 123456
+    group_name: oauth2
+    db: 0
+etcd_info:
+    addrs: ["127.0.0.1:2379"]
+    timeout: 3
+wx_info:
+    app_id : wxxxxxxxxxxxx31a
+    app_secret : xxxxxxxxxxxxxxxxxxxxxxxx
+    api_key : xxxxxxxxxxxxxxxxxxx
+    mch_id : xxxxxxxxx
+    notify_url : http://www.localhost.com
+    shear_url : 
+port: 82
+file_host: https://www.localhost.com/shares/api/v1
+max_capacity : 5
+def_group: 默认指标
+ext : [sh,sz,hk]
 ```
 - uniapp 配置
  修改`shares\uniapp\commcn\utils\server\def.js` 中 `server.Host`进行服务器配置
