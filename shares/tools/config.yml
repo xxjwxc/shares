@@ -20,10 +20,10 @@ is_out_file_by_table_name: false # 是否根据表名生成多个model
 is_out_page: true # 是否输出分页函数 
 
 db_info:
-    port : 3306
-    username : root
-    host : 175.24.103.30
-    password : Xxjwxc@123456
+    port : 3306 # 端口号
+    username : root # 用户名
+    host :  localhost # 地址
+    password : 123456 # 密码
     database : shares_tmp_db
     type: 0 # 数据库类型:0:mysql , 1:sqlite , 2:mssql
 self_type_define: # 自定义数据类型映射
