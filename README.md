@@ -98,19 +98,26 @@ ext : [sh,sz,hk]
 
 ![show](/image/1.jpg)
 
-![show](/image/2.jpg)
+<p align="center" margin: 0 auto;>
+<img src="/image/1.jpg" width=45%>
+<img src="/image/2.jpg" width=45%>
+</p>
 
-![show](/image/3.jpg)
+<p align="center" margin: 0 auto;>
+<img src="/image/3.jpg" width=45%>
+<img src="/image/4.jpg" width=45%>
+</p>
 
-![show](/image/4.jpg)
+<p align="center" margin: 0 auto;>
+<img src="/image/5.jpg" width=45%>
+<img src="/image/6.jpg" width=45%>
+</p>
 
-![show](/image/5.jpg)
+<p align="center" margin: 0 auto;>
+<img src="/image/7.jpg" width=45%>
+<img src="/image/8.jpg" width=45%>
+</p>
 
-![show](/image/6.jpg)
-
-![show](/image/7.jpg)
-
-![show](/image/8.jpg)
 
 
 
