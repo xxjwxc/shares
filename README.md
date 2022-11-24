@@ -96,8 +96,6 @@ ext : [sh,sz,hk]
 
 ### 实际效果图
 
-![show](/image/1.jpg)
-
 <p align="center" margin: 0 auto;>
 <img src="/image/1.jpg" width=45%>
 <img src="/image/2.jpg" width=45%>
