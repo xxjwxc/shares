@@ -14,7 +14,7 @@
 
 ## 安装
 
-- 进入到 server 目录
+- 进入到 shares 目录
 - 安装 cmake 工具
 - 安装服务器
 ```
@@ -23,7 +23,6 @@ git clone git@github.com:xxjwxc/shares.git
 cd shares
 git submodule update --init --recursive
 
-cd server
 make run
 ```
 - 客户端运行(hbuilder 直接导入 uniapp 即可)
