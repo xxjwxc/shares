@@ -46,8 +46,20 @@ sudo ./shares run
 - 修改目录`apidoc/proto/shares/`目录下相关proto文件
 - 进入到`server`目录 使用`make gen`生成相关接口
 
+
 ## 配置说明
+- mysql
+### 目录位置 [mysql](mysql)
+
+[shares_tmp_db.sql（表结构&&数据）](mysql%2Fshares_tmp_db.sql)<br>
+[shares_tmp_db_views.sql（views视图）](mysql%2Fshares_tmp_db_views.sql)<br>
+[shares_tmp_db.sql.zip（两个sql的综合压缩文件）](mysql%2Fshares_tmp_db.sql.zip)<br>
+
 - 服务配置
+```text
+    # 修改配置文件
+    vim shares/conf/config.yml
+```
 ```yaml
 base:
     is_dev : true
@@ -56,7 +68,7 @@ base:
     service_displayname : sharesserver
     sercice_desc : shares微服务
 tools_type: 4 # 0:正式环境,1:日分析,2:抓取消息,3:放量,4:放量监听
-mysql_info:
+db_info:
     port : 3306 # 端口号
     username : root # 用户名
     host :  localhost # 地址
