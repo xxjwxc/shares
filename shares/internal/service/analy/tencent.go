@@ -16,12 +16,12 @@ import (
 	nlp "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/nlp/v20190408"
 )
 
-type tencentIfs struct {
+type TencentIfs struct {
 	client *nlp.Client
 	igsTag string // 忽略关键字
 }
 
-func (b *tencentIfs) Init() {
+func (b *TencentIfs) Init() {
 	orm := core.Dao.GetDBr()
 	info, _ := model.APITblMgr(orm.Where("tag = ?", "tencent")).Get()
 	if info.ID > 0 { // 可能有
@@ -43,15 +43,15 @@ func (b *tencentIfs) Init() {
 	return
 }
 
-func NewTencent() *tencentIfs {
-	b := &tencentIfs{}
+func NewTencent() *TencentIfs {
+	b := &TencentIfs{}
 	b.Init()
 
 	return b
 }
 
 // Lexer 腾讯分词
-func (b *tencentIfs) Lexer(txt string) []TencentItem {
+func (b *TencentIfs) Lexer(txt string) []TencentItem {
 	if b.client == nil {
 		return []TencentItem{}
 	}
@@ -75,7 +75,7 @@ func (b *tencentIfs) Lexer(txt string) []TencentItem {
 }
 
 // Lexer 分词
-func (b *tencentIfs) LexerString(items []TencentItem) string {
+func (b *TencentIfs) LexerString(items []TencentItem) string {
 	var list []string
 	for _, v := range items {
 		list = append(list, fmt.Sprintf("%v/%0.2f", v.Item, v.Score))
@@ -84,7 +84,7 @@ func (b *tencentIfs) LexerString(items []TencentItem) string {
 }
 
 // Lexer 分词
-func (b *tencentIfs) LexerTag(items []TencentItem) string {
+func (b *TencentIfs) LexerTag(items []TencentItem) string {
 	var list []string
 	for _, v := range items {
 		if v.Score > 0.7 { // 不用忽略

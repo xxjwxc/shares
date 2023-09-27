@@ -55,10 +55,10 @@ func getMinuteFangLiangLocal() {
 			mylog.Error(err)
 			continue
 		}
-		len := len(out.List)
-		if len >= 6 { // 开始计算
-			left := out.List[len-4].Vol + out.List[len-5].Vol + out.List[len-6].Vol
-			right := out.List[len-1].Vol + out.List[len-2].Vol + out.List[len-3].Vol
+		num := len(out.List)
+		if num >= 6 { // 开始计算
+			left := out.List[num-4].Vol + out.List[num-5].Vol + out.List[num-6].Vol
+			right := out.List[num-1].Vol + out.List[num-2].Vol + out.List[num-3].Vol
 			if left*10 < right && left > 0 && right > 5000 { // 提醒
 				sharesInfo, err := event.GetShare(v.Code, true)
 				if err != nil {
@@ -78,10 +78,10 @@ func getMinuteFangLiangLocal() {
 			mylog.Error(err)
 			continue
 		}
-		len := len(out.List)
-		if len >= 6 { // 开始计算
-			left := out.List[len-4].Vol + out.List[len-5].Vol + out.List[len-6].Vol
-			right := out.List[len-1].Vol + out.List[len-2].Vol + out.List[len-3].Vol
+		num := len(out.List)
+		if num >= 6 { // 开始计算
+			left := out.List[num-4].Vol + out.List[num-5].Vol + out.List[num-6].Vol
+			right := out.List[num-1].Vol + out.List[num-2].Vol + out.List[num-3].Vol
 			if left*10 < right && left > 0 && right > 5000 { // 提醒
 				sharesInfo, err := event.GetShare(v.Code, true)
 				if err != nil {
@@ -236,10 +236,10 @@ func getMinuteFangLiang() {
 			mylog.Error(err)
 			continue
 		}
-		len := len(out.List)
-		if len >= 6 { // 开始计算
-			left := out.List[len-4].Vol + out.List[len-5].Vol + out.List[len-6].Vol
-			right := out.List[len-1].Vol + out.List[len-2].Vol + out.List[len-3].Vol
+		num := len(out.List)
+		if num >= 6 { // 开始计算
+			left := out.List[num-4].Vol + out.List[num-5].Vol + out.List[num-6].Vol
+			right := out.List[num-1].Vol + out.List[num-2].Vol + out.List[num-3].Vol
 			if left*10 < right && left > 0 && right > 10000 { // 提醒
 				sharesInfo, err := event.GetShare(v.Code, true)
 				if err != nil {
@@ -259,10 +259,10 @@ func getMinuteFangLiang() {
 			mylog.Error(err)
 			continue
 		}
-		len := len(out.List)
-		if len >= 6 { // 开始计算
-			left := out.List[len-4].Vol + out.List[len-5].Vol + out.List[len-6].Vol
-			right := out.List[len-1].Vol + out.List[len-2].Vol + out.List[len-3].Vol
+		num := len(out.List)
+		if num >= 6 { // 开始计算
+			left := out.List[num-4].Vol + out.List[num-5].Vol + out.List[num-6].Vol
+			right := out.List[num-1].Vol + out.List[num-2].Vol + out.List[num-3].Vol
 			if left*10 < right && left > 0 && right > 10000 { // 提醒
 				sharesInfo, err := event.GetShare(v.Code, true)
 				if err != nil {
