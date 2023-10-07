@@ -45,7 +45,7 @@ func hengpan() {
 			continue
 		}
 
-		var max, min float64
+		var maxNum, minNum float64
 		_len := len(list)
 		var points []Point
 		for i := len(list) - 1; i >= 0; i-- {
@@ -54,11 +54,11 @@ func hengpan() {
 				Y: list[i].Price,
 			})
 
-			if min == 0 || list[i].Price < min {
-				min = list[i].Price
+			if minNum == 0 || list[i].Price < minNum {
+				minNum = list[i].Price
 			}
-			if max == 0 || list[i].Price > max {
-				max = list[i].Price
+			if maxNum == 0 || list[i].Price > maxNum {
+				maxNum = list[i].Price
 			}
 		}
 
@@ -71,7 +71,7 @@ func hengpan() {
 		jp0 = (jp0 / float64(len(points))) * 100
 
 		// a = math.Pi / (math.Atan(a) * 180)
-		if p0.X < 0.001 && p0.X > -0.001 && jp0 < 0.5 && (max-min) < (min*0.1) {
+		if p0.X < 0.001 && p0.X > -0.001 && jp0 < 0.5 && (maxNum-minNum) < (minNum*0.1) {
 			sharesInfo, err := event.GetShare(code, true)
 			if err != nil {
 				continue

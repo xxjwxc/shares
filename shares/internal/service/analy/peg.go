@@ -13,7 +13,7 @@ import (
 )
 
 type pegResp struct {
-	Status  int    `json"status"`
+	Status  int    `json:"status"`
 	Message string `json:"message"`
 	Gzbj    Gzbj   `json:"gzbj"` // 个股比较
 }

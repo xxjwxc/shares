@@ -37,7 +37,7 @@ func init() {
 	_wx = t
 }
 
-//生成sessionId
+// 生成sessionId
 func createSessionkey() (sessionKey string) {
 	cache := mycache.NewCache(_cacheSessionkey)
 
@@ -132,7 +132,7 @@ func GetRandomString(n int) string {
 	var _bytes = []byte("0123456789")
 	var r *rand.Rand
 
-	result := []byte{}
+	var result []byte
 	if r == nil {
 		r = rand.New(rand.NewSource(time.Now().UnixNano()))
 	}
@@ -143,7 +143,7 @@ func GetRandomString(n int) string {
 	return string(result)
 }
 
-// 发送消息
+// SendMsg 发送消息
 func SendMsg(msgs []wx.TempWebMsg) {
 	for _, v := range msgs {
 		err := _wx.SendWebTemplateMsg(v)

@@ -41,7 +41,7 @@ func TrySearch(code string) *proto.SharesInfo {
 	return nil
 }
 
-// Search 确定的搜索
+// Searchs 确定的搜索
 func Searchs(codes []string) (resp []*proto.SharesInfo) {
 	if len(codes) == 0 {
 		return nil

@@ -1,8 +1,8 @@
 package core
 
 import (
-	"shares/internal/config"
 	"runtime"
+	"shares/internal/config"
 
 	"github.com/xxjwxc/public/errors"
 	"github.com/xxjwxc/public/mylog"

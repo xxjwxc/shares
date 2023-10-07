@@ -82,7 +82,7 @@ func calcEMA(n int, data [][]interface{}, field int) []float64 {
  */
 func calcEMAEx(n int, data []float64) []float64 {
 	var ema []float64
-	a := (2.0 / (float64(n) + 1.0))
+	a := 2.0 / (float64(n) + 1.0)
 	//普通一维数组
 	ema = append(ema, data[0])
 	for i := 1; i < len(data); i++ {
@@ -93,6 +93,6 @@ func calcEMAEx(n int, data []float64) []float64 {
 }
 
 func toFixed(data float64) float64 {
-	var tmp int64 = int64((data + 0.0004) * 1000)
+	var tmp = int64((data + 0.0004) * 1000)
 	return float64(tmp) * 0.001
 }

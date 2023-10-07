@@ -89,11 +89,11 @@ func dwfl() {
 		if left*3 > right { // 放大3倍量
 			continue
 		}
-		min := getMin(list[0].Price, list[1].Price, list[2].Price, list[3].Price, list[4].Price, list[5].Price) // 最小值
+		down := getMin(list[0].Price, list[1].Price, list[2].Price, list[3].Price, list[4].Price, list[5].Price) // 最小值
 		// 底部(30天，只有3天低于(6天中最低价))
 		lowNumber := 0
 		for _, v := range list {
-			if v.Price < min { // 底部
+			if v.Price < down { // 底部
 				lowNumber++
 			}
 		}

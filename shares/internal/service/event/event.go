@@ -250,6 +250,7 @@ func BuildOneDaily(code string, orm *mysqldb.MySqlDB) error {
 }
 
 // ma日均线
+
 func SetDailyMa(code string, day0 int64, orm *mysqldb.MySqlDB) error {
 
 	setDailyMa(code, day0, orm)
@@ -280,7 +281,7 @@ func setDailyMa(code string, day0 int64, orm *mysqldb.MySqlDB) error {
 		subQuery := orm.Model(&model.SharesDailyTbl{}).Select("volume").Where("code = ? and day0 < ?", code, day0).Order("day0 desc")
 		orm.Table("(?) as u", subQuery.Limit(5)).Select("COALESCE(avg(volume),0) as avgg").Find(&vol5)
 		if vol5 > 0 {
-			info.Vol = (info.Volume / vol5)
+			info.Vol = info.Volume / vol5
 		}
 	}
 
@@ -351,6 +352,7 @@ func maBS() {
 }
 
 // 计算北上净流入(page = 0 重新计算)
+
 func CountBSJLR(code string, page int) error {
 	_, simpleCode := SplitCode(code)
 	url := fmt.Sprintf("https://datacenter-web.eastmoney.com/api/data/v1/get?reportName=RPT_MUTUAL_HOLDSTOCKNORTH_STA&columns=CLOSE_PRICE,TRADE_DATE,HOLD_SHARES,A_SHARES_RATIO&filter=(SECURITY_CODE=%v)", simpleCode)
@@ -393,6 +395,7 @@ func CountBSJLR(code string, page int) error {
 }
 
 // 获取分时原始数据
+
 func GetMinute(code string) (*Minute, error) {
 	// 开始获取
 	out := SendGet(fmt.Sprintf("https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=%v", code), "")
@@ -443,6 +446,7 @@ func Decimal(value float64) float64 {
 }
 
 // 获取分时原始数据
+
 func GetDayliy(code string) ([][]interface{}, error) {
 	out := SendGet(fmt.Sprintf("https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=%v,day,,,320,qfq", code), "")
 	out = tools.ConvertToString(out, "gbk", "utf8")
