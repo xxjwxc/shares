@@ -95,10 +95,11 @@ func OnDeal() {
 	orm := core.Dao.GetDBw()
 	model.SharesWatchTblMgr(orm.Where("vaild = ?", true).Group("code")).Select("code").Find(&codes)
 	var outs []*shares.SharesInfo
+	num := 500 // 一次处理 500 条
 	for {
-		if len(codes) > 500 {
-			outs = append(outs, Searchs(codes)...)
-			codes = codes[500:]
+		if len(codes) > num {
+			outs = append(outs, Searchs(codes[:num])...)
+			codes = codes[num:]
 		} else {
 			outs = append(outs, Searchs(codes)...)
 			break
