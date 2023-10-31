@@ -20,9 +20,9 @@ linux:
 clear: 
 	test ! -d internal/model/ || rm -rf  internal/model/*
 	test ! -d err/ || rm -rf err/
-	test ! -f $(NAME) || rm $(NAME)
-	test ! -f $(NAME).exe || rm $(NAME).exe
-	rm -rf ./prc/$(NAME)/*.go # 删除proto文件夹下所有go文件（谨慎操作）
+	test ! -f $(NAME) || rm -rf $(NAME)
+	test ! -f $(NAME).exe || rm -rf $(NAME).exe
+	rm -rf ./rpc/$(NAME)/*.go # 删除proto文件夹下所有go文件（谨慎操作）
 # gen:
 # 	- mkdir ../rpc
 # 	- mkdir ./rpc/$(+)
