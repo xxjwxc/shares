@@ -47,7 +47,7 @@
                               "description": "",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -86,7 +86,7 @@
                               "description": "添加一个组织",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -125,7 +125,7 @@
                               "description": "给自己添加一个监听",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -164,7 +164,7 @@
                               "description": "",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -203,7 +203,7 @@
                               "description": "删除一个监听",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -242,7 +242,7 @@
                               "description": "获取所有中文",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -281,7 +281,7 @@
                               "description": "获取分组",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -320,7 +320,7 @@
                               "description": "获取消息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -359,7 +359,7 @@
                               "description": "",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -398,7 +398,7 @@
                               "description": "获取我的组织",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -437,7 +437,7 @@
                               "description": "精确查找代码",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -476,7 +476,7 @@
                               "description": "",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -515,7 +515,7 @@
                               "description": "获取分时图",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -554,7 +554,7 @@
                               "description": "搜索",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -593,7 +593,7 @@
                               "description": "",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -632,7 +632,7 @@
                               "description": "获取微信二维码",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -671,7 +671,7 @@
                               "description": "",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -710,7 +710,7 @@
                               "description": "微信授权获取登录信息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -749,7 +749,7 @@
                               "description": "是否要重新登录",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -788,7 +788,7 @@
                               "description": "更新用户信息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -827,7 +827,7 @@
                               "description": "更新用户信息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/GetsReq"
+                                   "$ref": "#/definitions/AnalyCodeReq"
                               }
                          }
                     ],
@@ -997,6 +997,14 @@
                          "description": "股票代码"
                     }
                },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "Empty": {
+               "type": "object",
+               "properties": {},
                "xml": {
                     "name": "",
                     "wrapped": false

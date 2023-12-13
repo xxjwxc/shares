@@ -1,0 +1,35 @@
+base:
+    is_dev : true
+    serial_number : 1.0.0
+    service_name : shares
+    service_displayname : sharesserver
+    sercice_desc : shares微服务
+tools_type: 4 # 0:正式环境,1:日分析,2:抓取消息,3:放量,4:放量监听
+db_info:
+    port : 3306 # 端口号
+    username : root # 用户名
+    host :  localhost # 地址
+    password : 123456 # 密码
+    # host : localhost
+    # password : qwer
+    database : caoguo_dev # 数据库名
+redis_info:
+    addrs: ["127.0.0.1:6379"]
+    password: 123456
+    group_name: oauth2
+    db: 0
+etcd_info:
+    addrs: ["127.0.0.1:2379"]
+    timeout: 3
+wx_info:
+    app_id : wxxxxxxxxxxxx31a
+    app_secret : xxxxxxxxxxxxxxxxxxxxxxxx
+    api_key : xxxxxxxxxxxxxxxxxxx
+    mch_id : xxxxxxxxx
+    notify_url : http://www.localhost.com
+    shear_url : 
+port: 82
+file_host: https://www.localhost.com/shares/api/v1
+max_capacity : 5
+def_group: 默认指标
+ext : [sh,sz,hk]

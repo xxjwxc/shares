@@ -50,8 +50,8 @@ func (dao *DaoCore) GetDBw() *mysqldb.MySqlDB {
 func (dao *DaoCore) InitDao() {
 	runtime.SetFinalizer(dao, dao.Destroy) //析构时触发
 
-	dao.dbr = mysqldb.OnInitDBOrm(config.GetMysqlConStr())
-	dao.dbw = mysqldb.OnInitDBOrm(config.GetMysqlConStr())
+	dao.dbr = mysqldb.OnInitDBOrm(config.GetMysqlConStr(), 5, 20, true)
+	dao.dbw = mysqldb.OnInitDBOrm(config.GetMysqlConStr(), 5, 20, true)
 }
 
 // Destroy 释放
