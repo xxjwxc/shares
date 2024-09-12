@@ -13,6 +13,9 @@
 
 ![show](/image/0.png)
 
+### Vscode插件地址 [复利备忘录](https://marketplace.visualstudio.com/items?itemName=a-shares.a-shares)
+(插件市场搜索:复利备忘录)
+
 ## 安装
 
 - 进入到 shares 目录
