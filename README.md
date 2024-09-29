@@ -7,11 +7,11 @@
 - gormt 嵌入，自动数据库代码生成 [gorm 自动构建(gormt)](https://github.com/xxjwxc/gormt)
 - 分时任务,盯盘助手,研报股评,每日监控,微信提醒，玩转组织，AI智能
 - uniapp 小程序端
-### 如果喜欢的朋友可以加作者微信(jnnpher)，作者建立了一个群，答疑解惑，方便交流
+<!-- ### 如果喜欢的朋友可以加作者微信(jnnpher)，作者建立了一个群，答疑解惑，方便交流 -->
 
-### 欢迎微信扫码体验
+<!-- ### 欢迎微信扫码体验
 
-![show](/image/0.png)
+![show](/image/0.png) -->
 
 ### Vscode插件地址 [复利备忘录](https://marketplace.visualstudio.com/items?itemName=a-shares.a-shares)
 (插件市场搜索:复利备忘录)
@@ -112,10 +112,17 @@ ext : [sh,sz,hk]
 ### 实际效果图
 
 <p align="center" margin: 0 auto;>
+<img src="/image/v_1.jpg" width=90%>
+</p>
+<p align="center" margin: 0 auto;>
+<img src="/image/v_2.jpg" width=90%>
+</p>
+
+
+<p align="center" margin: 0 auto;>
 <img src="/image/1.jpg" width=45%>
 <img src="/image/2.jpg" width=45%>
 </p>
-
 <p align="center" margin: 0 auto;>
 <img src="/image/3.jpg" width=45%>
 <img src="/image/4.jpg" width=45%>
