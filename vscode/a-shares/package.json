@@ -1,0 +1,377 @@
+{
+  "name": "a-shares",
+  "displayName": "复利备忘录",
+  "description": "复利备忘录，VSCode 里最强悍的A股量化平台,实时数据，做最好用的投资插件",
+  "version": "1.0.32",
+  "engines": {
+    "vscode": "^1.59.0"
+  },
+  "author": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxjwxc/shares.git"
+  },
+  "keywords": [
+    "stock",
+    "fund",
+    "ashares",
+    "股票",
+    "量化",
+    "复利备忘录",
+    "同花顺",
+    "东方财富",
+    "股东数",
+    "A股",
+    "a股",
+    "股票插件",
+    "股票量化",
+    "股票实时数据",
+    "股票数据",
+    "股票分析",
+    "股票软件",
+    "股票行情",
+    "股票交易",
+    "股票投资",
+    "金融模型",
+    "股票查询",
+    "人工智能",
+    "量化投资",
+    "股票分析软件"
+
+  ],
+  "publisher": "a-shares",
+  "categories": [
+    "Other"
+  ],
+  "icon": "images/logo.png",
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:extension.sayHello"
+  ],
+  "main": "./out/extension.js",
+  "contributes": { 
+      "viewsContainers": {
+        "activitybar": [
+          {
+            "id": "asharesMenu",
+            "title": "复利备忘录",
+            "icon": "images/logo1.svg"
+          }
+        ]
+      },
+      "commands": [
+        {
+          "command": "a-shares.clearStock",
+          "title": "清空数据",
+          "icon": "$(notifications-clear-all)"
+        },
+        {
+          "command": "a-shares.refreshStock",
+          "title": "刷新数据",
+          "icon": "$(refresh)"
+        },
+        {
+          "command": "a-shares.yjzd",
+          "title": "一键诊断",
+          "icon": {
+            "light": "images/light/flow.svg",
+            "dark": "images/dark/flow.svg"
+          }
+        },
+        {
+          "command": "a-shares.sortStock",
+          "title": "升序/降序/不排序",
+          "icon": {
+            "light": "images/light/sort.svg",
+            "dark": "images/dark/sort.svg"
+          }
+        },
+        {
+          "command": "a-shares.addStock",
+          "title": "添加股票",
+          "icon": "$(add)"
+        },
+        {
+          "command": "a-shares.setStockUp",
+          "title": "股票上移",
+          "icon": "$(arrow-up)"
+        },
+        {
+          "command": "a-shares.setStockDown",
+          "title": "股票下移",
+          "icon": "$(arrow-down)"
+        },
+        {
+          "command": "a-shares.setStockTop",
+          "title": "股票置顶",
+          "icon": {
+            "light": "images/light/top.svg",
+            "dark": "images/dark/top.svg"
+          }
+        },
+        {
+          "command": "a-shares.deleteStock",
+          "title": "删除股票"
+        },
+        {
+          "command": "a-shares.deleteStockOnline",
+          "title": "删除股票(同步删除)"
+        },
+        {
+          "command": "a-shares.addStockToBar",
+          "title": "添加至状态栏"
+        },
+        {
+          "command": "a-shares.clearUser",
+          "category": "清除用户",
+          "title": "退出",
+          "icon": "$(log-out)"
+        },{
+          "command": "a-shares.updateCode",
+          "category": "同步代码",
+          "title": "同步",
+          "icon": "$(refresh)"
+        },{
+          "command": "a-shares.toggleStatusBarVisibility",
+          "title": "a-shares: Toggle Status Bar Visibility"
+        }
+      ],
+      "viewsWelcome": [
+        {
+          "view": "asharesFundView.stock",
+          "contents": "无数据，请检查网络或添加股票"
+        },
+        {
+          "view": "asharesFundView.mega",
+          "contents": "无数据，请检查网络"
+        },{
+          "view": "asharesFundView.chat",
+          "contents": "无数据，请检查网络"
+        }
+      ],
+      "configuration": {
+        "type": "object",
+        "title": "复利备忘录",
+        "properties": {
+          "a-shares.stocks": {
+            "type": "array",
+            "default": [
+              "sh000001",
+              "sh000300",
+              "sh000016",
+              "sh000688"
+            ],
+            "description": "配置需要监控的股票代码（建议通过界面新增）"
+          },
+          "a-shares.statusBarStock": {
+            "type": "array",
+            "default": [
+              "sh000001"
+            ],
+            "description": "状态栏展示的股票（建议通过界面选择设置，必须是在股票代码已设置存在）"
+          },
+          "a-shares.interval": {
+            "type": "number",
+            "default": 5000,
+            "description": "配置轮询请求最新数据的时间间隔，单位：毫秒（最小轮询间隔是3秒）"
+          },
+          "a-shares.riseColor": {
+            "type": "string",
+            "default": "#ff785d",
+            "description": "股票涨的颜色"
+          },
+          "a-shares.fallColor": {
+            "type": "string",
+            "default": "#ec7f75",
+            "description": "股票跌的颜色"
+          },"a-shares.deviceid": {
+            "type": "string",
+            "default": "",
+            "description": "设备id"
+          },"a-shares.userid": {
+            "type": "string",
+            "default": "",
+            "description": "用户id"
+          },"a-shares.username": {
+            "type": "string",
+            "default": "",
+            "description": "用户名"
+          },"a-shares.userurl": {
+            "type": "string",
+            "default": "",
+            "description": "头像"
+          },
+          "a-shares.hideStatusBarStock": {
+            "type": "boolean",
+            "default": false,
+            "description": "是否隐藏股票状态栏"
+          },
+          "a-shares.hideStatusBar": {
+            "type": "boolean",
+            "default": false,
+            "description": "是否隐藏状态栏"
+          }
+        }
+      },
+      "menus": {
+        "view/title": [
+
+          {
+            "command": "a-shares.refreshStock",
+            "when": "view == asharesFundView.stock",
+            "group": "navigation@1"
+          },
+          {
+            "command": "a-shares.yjzd",
+            "when": "view == asharesFundView.stock",
+            "group": "navigation@2"
+          },
+          {
+            "command": "a-shares.sortStock",
+            "when": "view == asharesFundView.stock",
+            "group": "navigation@3"
+          },
+          {
+            "command": "a-shares.addStock",
+            "when": "view == asharesFundView.stock",
+            "group": "navigation@4"
+          },
+          {
+            "command": "a-shares.clearStock",
+            "when": "view == asharesFundView.stock",
+            "group": "navigation@5"
+          },
+          {
+            "command": "a-shares.clearUser",
+            "group": "navigation",
+            "when": "view == asharesFundView.chat"
+          },
+          {
+            "command": "a-shares.clearUser",
+            "group": "navigation",
+            "when": "view == asharesFundView.account"
+          },
+          {
+            "command": "a-shares.updateCode",
+            "group": "navigation",
+            "when": "view == asharesFundView.account"
+          }
+        ],
+        "view/item/context": [
+          {
+            "command": "a-shares.setStockUp",
+            "when": "view == asharesFundView.stock && viewItem != category  && viewItem!=nodata",
+            "group": "group1"
+          },
+          {
+            "command": "a-shares.setStockDown",
+            "when": "view == asharesFundView.stock && viewItem != category  && viewItem!=nodata",
+            "group": "group1"
+          },
+          {
+            "command": "a-shares.setStockTop",
+            "when": "view == asharesFundView.stock && viewItem != category  && viewItem!=nodata",
+            "group": "group1"
+          },
+          {
+            "command": "a-shares.deleteStock",
+            "when": "view == asharesFundView.stock  && viewItem != category",
+            "group": "group5"
+          },
+          {
+            "command": "a-shares.deleteStockOnline",
+            "when": "view == asharesFundView.stock  && viewItem != category",
+            "group": "group5"
+          }, 
+          {
+            "command": "a-shares.addStockToBar",
+            "when": "view == asharesFundView.stock  && viewItem != category",
+            "group": "group6"
+          },        {
+            "command": "a-shares.setStockTop",
+            "when": "view == asharesFundView.stock && viewItem != category && viewItem!=nodata",
+            "group": "inline"
+          },
+          {
+            "command": "a-shares.setStockUp",
+            "when": "view == asharesFundView.stock && viewItem != category && viewItem!=nodata",
+            "group": "inline"
+          },
+          {
+            "command": "a-shares.setStockDown",
+            "when": "view == asharesFundView.stock && viewItem != category && viewItem!=nodata",
+            "group": "inline"
+          }
+        ]
+      },
+      "views": {
+        "asharesMenu": [
+          {
+            "id": "asharesFundView.stock",
+            "name": "Stock"
+          },
+          {
+            "id": "asharesFundView.mega",
+            "visibility": "visible",
+            "name": "Mega"
+          },{
+            "id": "asharesFundView.chat",
+            "visibility": "visible",
+            "name": "复利Chat",
+            "type": "webview"
+          },
+          {
+            "id": "asharesFundView.account",
+            "visibility": "visible",
+            "name": "Account",
+            "type": "webview"
+          }
+        ]
+      }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.59.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.3.9",
+    "cross-env": "^7.0.3",
+    "glob": "^7.1.6",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "mocha": "^7.1.2",
+    "prettier": "^2.1.2",
+    "standard-version": "^9.3.2",
+    "vsce": "^2.15.0",
+    "vscode-test": "^1.3.0"
+  },
+  "dependencies": {
+    "amplitude": "^5.1.4",
+    "axios": "^0.19.2",
+    "cheerio": "1.0.0-rc.6",
+    "compare-versions": "^3.6.0",
+    "entities": "2.2.0",
+    "iconv-lite": "^0.6.2",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.throttle": "^4.1.1",
+    "moment": "^2.29.4",
+    "public-ip": "^4.0.3",
+    "ws": "^7.4.1"
+  },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ]
+}
