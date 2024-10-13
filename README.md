@@ -9,9 +9,9 @@
 - uniapp 小程序端
 <!-- ### 如果喜欢的朋友可以加作者微信(jnnpher)，作者建立了一个群，答疑解惑，方便交流 -->
 
-<!-- ### 欢迎微信扫码体验
+### 欢迎微信扫码体验
 
-![show](/image/0.png) -->
+![show](/image/0.png) 
 
 ### Vscode插件地址 [复利备忘录](https://marketplace.visualstudio.com/items?itemName=a-shares.a-shares)
 (插件市场搜索:复利备忘录)
